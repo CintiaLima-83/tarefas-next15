@@ -1,36 +1,94 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 📋 Tarefas Next.js 15
 
-## Getting Started
+Projeto simples desenvolvido em **Next.js 15** com **TypeScript**, utilizando o **App Router**.  
+Objetivo: praticar conceitos de **testes unitários** com **Jest** e **Testing Library**, além de reforçar o uso de **Server Components**, **Client Components** e **hooks personalizados**.
 
-First, run the development server:
+---
 
-```bash
+## 🚀 Funcionalidades
+
+- Exibir uma lista inicial de tarefas (simulação de API com array local).
+- Adicionar novas tarefas via formulário controlado (`<NovaTarefa />`).
+- Contar a quantidade de tarefas com um hook personalizado (`useContadorDeTarefas`).
+- Testes unitários cobrindo:
+  - Renderização da página principal.
+  - Componente `<NovaTarefa />`.
+  - Hook `useContadorDeTarefas`.
+
+---
+
+## 📂 Estrutura do Projeto
+
+tarefas-next15/
+├── app/
+│   └── page.tsx          # Server Component principal
+├── components/
+│   └── NovaTarefa.tsx    # Client Component para adicionar tarefas
+├── hooks/
+│   └── useContadorDeTarefas.ts
+├── src/app/tests/
+│   └── page.test.tsx     # Testes da página principal
+│   └── NovaTarefa.test.tsx
+│   └── useContadorDeTarefas.test.ts
+├── jest.config.js
+├── jest.setup.ts
+├── tsconfig.json
+└── README.md
+
+Código
+
+---
+
+## 🛠️ Tecnologias
+
+- [Next.js 15](https://nextjs.org/)
+- [React 19](https://react.dev/)
+- [TypeScript](https://www.typescriptlang.org/)
+- [Jest](https://jestjs.io/)
+- [Testing Library](https://testing-library.com/)
+
+---
+
+## ⚙️ Instalação e Execução
+
+1. Clone o repositório:
+   ```bash
+   git clone https://github.com/CintiaLima-83/tarefas-next15.git
+   cd tarefas-next15
+Instale as dependências:
+
+bash
+npm install --legacy-peer-deps
+Execute o servidor de desenvolvimento:
+
+bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+Rode os testes:
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+bash
+npm run test
+✅ Testes
+Os testes foram escritos com Jest e Testing Library.
+Exemplos de cenários cobertos:
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+Renderização da lista inicial de tarefas.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+Validação do formulário de nova tarefa.
 
-## Learn More
+Contagem de tarefas via hook personalizado.
 
-To learn more about Next.js, take a look at the following resources:
+Para rodar em modo contínuo:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+bash
+npm run test:watch
+📖 Objetivo da Atividade
+Este projeto foi desenvolvido como exercício prático para reforçar:
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+Configuração de ambiente de testes em Next.js.
 
-## Deploy on Vercel
+Escrita de testes unitários e de integração.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Uso de Server Components, Client Components e hooks personalizados.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+👩‍💻 Autora
+Projeto desenvolvido por Cíntia Lima como parte dos estudos de Next.js e testes unitários.
